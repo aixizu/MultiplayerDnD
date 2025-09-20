@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dhe8py84rspjq"]
 
-[ext_resource type="Script" uid="uid://cl23lwbx66h8d" path="res://scripts/network_ui.gd" id="1_rqm01"]
+[ext_resource type="Script" uid="uid://dt2vj8kid1tcw" path="res://scripts/network_ui.gd" id="1_rqm01"]
 
 [node name="NetworkUI" type="Control"]
 layout_mode = 3
@@ -13,8 +13,8 @@ script = ExtResource("1_rqm01")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 543.0
+offset_bottom = 136.0
 
 [node name="Server" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -23,6 +23,14 @@ text = "Server"
 [node name="Client" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Client"
+
+[node name="IP" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+placeholder_text = "IP"
+
+[node name="Status" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Status:"
 
 [connection signal="pressed" from="VBoxContainer/Server" to="." method="_on_server_pressed"]
 [connection signal="pressed" from="VBoxContainer/Client" to="." method="_on_client_pressed"]
